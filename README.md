@@ -31,7 +31,7 @@ Instale pix-utils-js com npm ou yarn
 
 | Função   | Parametro       | Retorno                           |
 | :---------- | :--------- | :---------------------------------- |
-| `identify` | `input: {pix: string}` | Pix `{ pix: string, type: string }` |
+| `identify` | `input: {pix: string}` | Pix `{ pix: string, type: 'email' \|  'cpf' \| 'cnpj' \|  'random' \|'phone' }` |
 
 #### Validar uma chave pix
 
@@ -55,7 +55,7 @@ Instale pix-utils-js com npm ou yarn
 
 | Função   | Parametro       | Retorno                           |
 | :---------- | :--------- | :---------------------------------- |
-| `normalize` | `input: {pix: string}` | Pix `{ pix: string, type: string }` |
+| `normalize` | `input: {pix: string}` | Pix `{ pix: string, type: 'email' \|  'cpf' \| 'cnpj' \|  'random' \|'phone' }` |
 
 
 
