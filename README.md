@@ -45,8 +45,12 @@ Instale pix-utils com npm ou yarn
 ```js
   const { normalize } = 'pix-utils'
   console.log(normalize({pix: '000.000.000-00'})) // {pix: '00000000000', type: 'cpf'}
-  console.log(validate({pix: '00.000.000/0000-00'})) // {pix: '00000000000000', type: 'cnpj'}
+  console.log(normalize({pix: '00.000.000/0000-00'})) // {pix: '00000000000000', type: 'cnpj'}
   ```
+
+| Função   | Parametro       | Retorno                           |
+| :---------- | :--------- | :---------------------------------- |
+| `normalize` | `input: {pix: string}` | Pix `{ pix: string, type: string }` |
 
 
 
