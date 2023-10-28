@@ -1,6 +1,11 @@
 
 # 💸 pix-utils-js
 
+![](https://img.shields.io/npm/dw/pix-utils-js)
+![](https://img.shields.io/npm/v/pix-utils-js)
+![](https://img.shields.io/github/contributors/paulohenriquesn/pix-utils-js)
+![](https://img.shields.io/npm/l/pix-utils-js)
+
 Uma pequena biblioteca que irá te ajudar a lidar com chaves pix
 
 
