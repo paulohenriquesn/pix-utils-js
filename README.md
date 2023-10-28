@@ -25,7 +25,7 @@ Instale pix-utils-js com npm ou yarn
 #### Identifique uma chave pix
 
 ```js
-  const { identify } = 'pix-utils-js'
+  import { identify } from 'pix-utils-js'
   const { pix, type } = identify({pix: 'test@gmail.com'}) // {pix: 'test@gmail.com', type: 'email'}
 ```
 
@@ -36,7 +36,7 @@ Instale pix-utils-js com npm ou yarn
 #### Validar uma chave pix
 
 ```js
-  const { validate } = 'pix-utils-js'
+  import { validate } from 'pix-utils-js'
   console.log(validate({pix: 'test@gmail.com'})) // true
   console.log(validate({pix: 'test'})) // false
   console.log(validate({pix: 'test@gmail.com', type : 'cpf'})) // false
@@ -49,7 +49,7 @@ Instale pix-utils-js com npm ou yarn
 #### Normalizar uma chave pix
 
 ```js
-  const { normalize } = 'pix-utils-js'
+  import { normalize } from 'pix-utils-js'
   console.log(normalize({pix: '000.000.000-00'})) // {pix: '00000000000', type: 'cpf'}
   console.log(normalize({pix: '00.000.000/0000-00'})) // {pix: '00000000000000', type: 'cnpj'}
   console.log(normalize({pix: '+55 (11) 0000-0000'})) // {pix: '551100000000', type: 'phone'}
