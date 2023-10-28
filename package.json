@@ -1,9 +1,17 @@
 {
-  "name": "pix-utils",
+  "name": "pix-utils-js",
   "version": "1.0.0",
   "author": "Paulo Henrique",
   "description": "Um pacote para fornecer utilidades e validações para chaves pix.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulohenriquesn/pix-utils-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/paulohenriquesn/pix-utils-js/issues"
+  },
+  "homepage": "https://github.com/paulohenriquesn/pix-utils-js#readme",
   "scripts": {
     "test": "node tests/index.js"
   },
