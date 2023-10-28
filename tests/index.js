@@ -75,4 +75,8 @@ describe("normalize", () => {
     it('should normalize cnpj key', (t) => {
         assert.deepEqual(normalize({ pix: "00.000.000/0000-00"}), { pix: '00000000000000', type: 'cnpj'});
     });
+
+    it('should normalize phone key', (t) => {
+        assert.deepEqual(normalize({ pix: "+55 (11) 0000-0000"}), { pix: '551100000000', type: 'phone'});
+    });
 })

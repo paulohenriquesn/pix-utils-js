@@ -51,6 +51,7 @@ Instale pix-utils-js com npm ou yarn
   const { normalize } = 'pix-utils-js'
   console.log(normalize({pix: '000.000.000-00'})) // {pix: '00000000000', type: 'cpf'}
   console.log(normalize({pix: '00.000.000/0000-00'})) // {pix: '00000000000000', type: 'cnpj'}
+  console.log(normalize({pix: '+55 (11) 0000-0000'})) // {pix: '551100000000', type: 'phone'}
   ```
 
 | Função   | Parametro       | Retorno                           |

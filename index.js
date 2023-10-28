@@ -56,7 +56,7 @@ const normalize = (input) => {
 
     const { type } = identify({ pix })
 
-    if(type === 'cpf' || type === 'cnpj') {
+    if(type === 'cpf' || type === 'cnpj' || type === 'phone') {
         pix = pix.replace(/[^0-9]/g, '')
     }
 

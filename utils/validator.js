@@ -10,7 +10,7 @@ class Validator {
     }
 
     isPhoneNumber(phoneNumber) {
-        const phoneNumberRegex = /^(\d{3}-\d{3}-\d{4}|\d{10}|\(\d{3}\)\s*\d{3}-\d{4}|\d{3}\s\d{3}\s\d{4})$/;
+        const phoneNumberRegex = /^(\+\d{2}\s*)?(\(\d{2}\))?\s*(\d{4,5}-?\d{4})$/
         return phoneNumberRegex.test(phoneNumber)
     }
 
