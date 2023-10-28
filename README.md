@@ -39,7 +39,7 @@ Instale pix-utils-js com npm ou yarn
   const { validate } = 'pix-utils-js'
   console.log(validate({pix: 'test@gmail.com'})) // true
   console.log(validate({pix: 'test'})) // false
-  console.log(validate({pix: 'test@gmail.com', 'type' : 'cpf'})) // false
+  console.log(validate({pix: 'test@gmail.com', type : 'cpf'})) // false
   ```
 
 | Função   | Parametro       | Retorno                           |
