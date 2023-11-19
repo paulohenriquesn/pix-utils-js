@@ -7,7 +7,8 @@ const validationPixMap = {
     random: validator.isUUID,
     phone: validator.isPhoneNumber,
     cnpj: validator.isCNPJ,
-    cpf: validator.isCPF
+    cpf: validator.isCPF,
+    qrcode: validator.isQRCode
 };
 
 

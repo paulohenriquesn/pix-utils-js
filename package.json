@@ -1,6 +1,6 @@
 {
   "name": "pix-utils-js",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "Paulo Henrique",
   "description": "Um pacote para fornecer utilidades e validações para chaves pix.",
   "main": "index.js",

@@ -9,6 +9,11 @@ describe('validate', () => {
         assert.strictEqual(sut, false);
     });
 
+    it('should returns false if qr pix key is provided', (t) => {
+        const sut = validate({pix: 'invalid', type: 'qrcode'})
+        assert.strictEqual(sut, false);
+    });
+
     it('should returns true if email key is provided and is valid', (t) => {
         const sut = validate({pix: Generator.generateRandomEmail()})
         assert.strictEqual(sut, true);
@@ -22,6 +27,18 @@ describe('validate', () => {
     it('should returns true if random key is provided and is valid', (t) => {
         const sut = validate({pix: Generator.generateRandomUUID()})
         assert.strictEqual(sut, true);
+    });
+
+    it('should returns true qrcode if qrcode pix is provided and is valid', (t) => {
+        const qrCode = '00020126360014BR.GOV.BCB.PIX0114+5511999226498520400005303986540813213.005802BR5904test6004test62070503***630450CF'
+        const sut = validate({ pix: qrCode })
+        assert.strictEqual(sut, true);
+    });
+
+    it('should returns false qrcode if qrcode pix is provided and is invalid', (t) => {
+        const qrCode = '/INVALID/00020126360014BR.GOV.BCB.PIX0114+5511999226498520400005303986540813213.005802BR5904test6004test62070503***630450CF'
+        const sut = validate({ pix: qrCode })
+        assert.strictEqual(sut, false);
     });
 })
 
@@ -56,6 +73,12 @@ describe('identify', () => {
         assert.notStrictEqual(sut, { pix: phone, type: 'phone' });
     });
 
+    it('should returns qrcode if qrcode pix is provided', (t) => {
+        const qrCode = '00020126360014BR.GOV.BCB.PIX0114+5511999226498520400005303986540813213.005802BR5904test6004test62070503***630450CF'
+        const sut = identify({ pix: qrCode })
+        assert.notStrictEqual(sut, { pix: qrCode, type: 'qrcode' });
+    });
+
     it('should throws if invalid pix is provided', (t) => {
         let sut;
         try {
@@ -78,5 +101,9 @@ describe("normalize", () => {
 
     it('should normalize phone key', (t) => {
         assert.deepEqual(normalize({ pix: "+55 (11) 0000-0000"}), { pix: '551100000000', type: 'phone'});
+    });
+
+    it('should normalize qrcode key', (t) => {
+        assert.deepEqual(normalize({ pix: "00020126360014BR.GOV.BCB.PIX0114+5511999226498520400005303986540813213.005802BR5904test6004test62070503***630450CF"}), { pix: '00020126360014BR.GOV.BCB.PIX0114+5511999226498520400005303986540813213.005802BR5904test6004test62070503***630450CF', type: 'qrcode'});
     });
 })

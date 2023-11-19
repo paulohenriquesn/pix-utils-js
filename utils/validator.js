@@ -23,6 +23,11 @@ class Validator {
         const cnpjRegex = /^(\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}|\d{14})$/;
         return cnpjRegex.test(cnpj)
     }
+
+    isQRCode(pixKeyCopyPaste) {
+        const qrCodeRegex = /^(000201|01|2636)/
+        return qrCodeRegex.test(pixKeyCopyPaste)
+    }
 }
 
 module.exports = {

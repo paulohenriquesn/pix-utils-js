@@ -1,4 +1,4 @@
-export type PixType = "email" | "cpf" | "cnpj" | "random" | "phone"
+export type PixType = "email" | "cpf" | "cnpj" | "random" | "phone" | "qrcode"
 
 export interface InvalidPix extends Error {
     message: "chave pix invalida."
