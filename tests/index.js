@@ -100,7 +100,7 @@ describe("normalize", () => {
     });
 
     it('should normalize phone key', (t) => {
-        assert.deepEqual(normalize({ pix: "+55 (11) 0000-0000"}), { pix: '551100000000', type: 'phone'});
+        assert.deepEqual(normalize({ pix: "(11) 98888-8888"}), { pix: '11988888888', type: 'phone'});
     });
 
     it('should normalize qrcode key', (t) => {

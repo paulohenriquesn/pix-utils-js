@@ -51,7 +51,7 @@ Instale pix-utils-js com npm ou yarn
   import { normalize } from 'pix-utils-js'
   console.log(normalize({pix: '000.000.000-00'})) // {pix: '00000000000', type: 'cpf'}
   console.log(normalize({pix: '00.000.000/0000-00'})) // {pix: '00000000000000', type: 'cnpj'}
-  console.log(normalize({pix: '+55 (11) 0000-0000'})) // {pix: '551100000000', type: 'phone'}
+  console.log(normalize({pix: '(11) 98888-8888'})) // {pix: '11988888888', type: 'phone'}
   console.log(normalize({pix: '00020126360014BR.GOV...'})) // {pix: '00020126360014BR.GOV...', type: 'qrcode'}
   ```
 

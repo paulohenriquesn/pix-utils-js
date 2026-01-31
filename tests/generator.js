@@ -2,8 +2,8 @@ class Generator {
     static generateValidPhoneNumber() {
         const dddList = ['11', '21', '31', '41', '51', '61', '71', '81', '91'];
         const selectedDDD = dddList[Math.floor(Math.random() * dddList.length)];
-
-        const phoneNumber = `${selectedDDD}9${Generator.generateRandomNumber(8)}`;
+        const firstDigit = Math.random() < 0.5 ? '8' : '9';
+        const phoneNumber = `${selectedDDD}${firstDigit}${Generator.generateRandomNumber(8)}`;
         return phoneNumber;
     }
 

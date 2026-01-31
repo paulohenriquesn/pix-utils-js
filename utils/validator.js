@@ -10,8 +10,11 @@ class Validator {
     }
 
     isPhoneNumber(phoneNumber) {
-        const phoneNumberRegex = /^(\+\d{2}\s*)?(\(\d{2}\))?\s*(\d{4,5}-?\d{4})$/
-        return phoneNumberRegex.test(phoneNumber)
+        const normalized = phoneNumber.replace(/[^0-9]/g, '');
+        
+        const phoneNumberRegex = /^\d{2}[89]\d{8}$/;
+        
+        return phoneNumberRegex.test(normalized);
     }
 
     isCPF(cpf) {
